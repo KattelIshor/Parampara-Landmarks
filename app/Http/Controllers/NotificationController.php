@@ -11,6 +11,11 @@ use Illuminate\Http\Request;
 
 class NotificationController extends Controller
 {
+    /**
+     * Summary of notifyAdmin
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function notifyAdmin(Request $request)
     {
         // Perform notification logic here
