@@ -3,12 +3,12 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                @if (!empty($logo_image->value))
+                {{-- @if (!empty($logo_image->value))
                     <a class="navbar-brand" href="{{ route('userHome') }}">
-                        <img style="height: 40px" src="{{ asset('storage/siteSettings/' . $logo_image->value) }}"
+                        <img class="logo-image" src="{{ asset('storage/siteSettings/' . $logo_image->value) }}"
                             alt="{{ $brand_title->value ?? 'Parampara-Landmarks' }}">
                     </a>
-                @endif
+                @endif --}}
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -22,22 +22,24 @@
                                 href="{{ route('userHome') }}">Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link @if ($menu == 'purpose') active @endif dropdown-toggle" href="#"
-                                id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link @if ($menu == 'purpose') active @endif dropdown-toggle"
+                                href="#" id="navbarDropdownPurpose" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 Purpose
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownPurpose">
                                 <li><a class="dropdown-item" href="{{ route('show_purpose', 'sale') }}">Sale</a></li>
                                 <li><a class="dropdown-item" href="{{ route('show_purpose', 'rent') }}">Rent</a></li>
                                 <li><a class="dropdown-item" href="{{ route('show_purpose', 'pg') }}">PG</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link @if ($menu == 'category') active @endif dropdown-toggle" href="#"
-                                id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link @if ($menu == 'category') active @endif dropdown-toggle"
+                                href="#" id="navbarDropdownCategory" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 Category
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownCategory">
                                 @foreach ($cate as $item)
                                     <li><a class="dropdown-item"
                                             href="{{ route('show_category', $item->slug_name) }}">{{ $item->name }}</a>
@@ -47,10 +49,10 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link @if ($menu == 'city') active @endif dropdown-toggle" href="#"
-                                id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                id="navbarDropdownCity" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 City
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownCity">
                                 @foreach ($city as $item)
                                     <li><a class="dropdown-item"
                                             href="{{ route('show_city', $item->slug_city) }}">{{ $item->city }}</a>
@@ -58,20 +60,18 @@
                                 @endforeach
                             </ul>
                         </li>
-
                     </ul>
                     <div class="d-flex">
                         <form id="searchFrm" action="{{ route('propSearch') }}" method="POST" class="me-2">
                             @csrf
                             <div class="input-group">
-                                <select class="form-select w-25" name="purpose" id="">
+                                <select class="form-select w-25" name="purpose" id="searchPurpose">
                                     <option
                                         @if (!empty($purpose)) {{ $purpose == 'sale' ? 'selected' : '' }} @endif
                                         value="sale">Sale</option>
                                     <option
                                         @if (!empty($purpose)) {{ $purpose == 'rent' ? 'selected' : '' }} @endif
                                         value="rent">Rent</option>
-
                                     <option
                                         @if (!empty($purpose)) {{ $purpose == '*' ? 'selected' : '' }} @endif
                                         value="*">All</option>

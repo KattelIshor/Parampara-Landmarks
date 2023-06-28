@@ -10,6 +10,7 @@ return [
                 '/css/carousel.css',
                 '/css/headers.css',
                 '/css/footers.css',
+                '/css/style.css',
                 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css',
             ],
             'js' => [

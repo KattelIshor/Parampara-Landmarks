@@ -1,18 +1,18 @@
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">
-        {{ $brand_title->value ?? 'Parampara-Landmarks' }}
+        <span class="text-primary">{{ $brand_title->value ?? 'Parampara-Landmarks' }}</span>
         @if ($status)
-            | {{ $user['name'] }}
+            <span class="text-success">| {{ $user['name'] }}</span>
         @else
-            | Guest
+            <span class="text-info">| Guest</span>
         @endif
     </a>
     <div class="w-100"></div>
-    <ul>
+    <ul class="navbar-nav">
         @auth
             @foreach (auth()->user()->unreadNotifications ?? [] as $notification)
-                <li>
-                    <a href="{{ $notification->data['link'] }}">{{ $notification->data['message'] }}</a>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="{{ $notification->data['link'] }}">{{ $notification->data['message'] }}</a>
                 </li>
             @endforeach
         @endauth
@@ -23,14 +23,13 @@
     </button>
     <div class="navbar-nav">
         @if ($status)
-            <div class="nav-item text-nowrap btn btn-dark">
+            <div class="nav-item text-nowrap btn btn-primary">
                 <a class="nav-link px-3" href="{{ url(route('AdminLogout')) }}">Log out</a>
             </div>
         @else
-            <div class="nav-item text-nowrap btn btn-dark">
+            <div class="nav-item text-nowrap btn btn-info">
                 <a class="nav-link px-3" href="{{ url(route('AdminLoginPage')) }}">Log in</a>
             </div>
         @endif
     </div>
 </header>
-

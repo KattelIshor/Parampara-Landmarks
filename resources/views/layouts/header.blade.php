@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="{{ asset('/css/styles.css')}}">
+
 
     @if (!empty($logo_image->value))
         <link rel="icon" type="image/x-icon" href="{{ asset('/storage/siteSettings/' . $logo_image->value) }}">
@@ -12,16 +14,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>
-
         {{ $title ? $title : '' }} | {{ $site_title->value ?? config('dz.public.title') }}
-
     </title>
 
     @foreach (config('dz.public.global.css') as $item)
         <link rel="stylesheet" crossorigin="anonymous" href="{{ $item }}">
     @endforeach
 
-    {{-- <title>Home Page</title> --}}
+    <style>
+        .navbar-golden {
+            background-color: goldenrod;
+        }
+
+    </style>
 </head>
 
 <body class="py-0">

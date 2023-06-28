@@ -521,6 +521,8 @@ class ComposerStaticInitc136439c954d48f6db69d42c82ca35a9
 
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Events\\NewUserRegistered' => __DIR__ . '/../..' . '/app/Events/NewUserRegistered.php',
+        'App\\Events\\UserRegistered' => __DIR__ . '/../..' . '/app/Events/UserRegistered.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
@@ -538,6 +540,9 @@ class ComposerStaticInitc136439c954d48f6db69d42c82ca35a9
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\UserCheck' => __DIR__ . '/../..' . '/app/Http/Middleware/UserCheck.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Listeners\\HandleUserRegistration' => __DIR__ . '/../..' . '/app/Listeners/HandleUserRegistration.php',
+        'App\\Listeners\\NotifyAdminAboutNewUser' => __DIR__ . '/../..' . '/app/Listeners/NotifyAdminAboutNewUser.php',
+        'App\\Listeners\\SendNotificationOnUserRegistered' => __DIR__ . '/../..' . '/app/Listeners/SendNotificationOnUserRegistered.php',
         'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',
         'App\\Models\\City' => __DIR__ . '/../..' . '/app/Models/City.php',
         'App\\Models\\Facilities' => __DIR__ . '/../..' . '/app/Models/Facilities.php',
@@ -549,7 +554,9 @@ class ComposerStaticInitc136439c954d48f6db69d42c82ca35a9
         'App\\Models\\UserData' => __DIR__ . '/../..' . '/app/Models/UserData.php',
         'App\\Models\\cms' => __DIR__ . '/../..' . '/app/Models/cms.php',
         'App\\Models\\gallary' => __DIR__ . '/../..' . '/app/Models/gallary.php',
+        'App\\Notifications\\AdminNewUserNotification' => __DIR__ . '/../..' . '/app/Notifications/AdminNewUserNotification.php',
         'App\\Notifications\\AdminNotification' => __DIR__ . '/../..' . '/app/Notifications/AdminNotification.php',
+        'App\\Notifications\\NewUserNotification' => __DIR__ . '/../..' . '/app/Notifications/NewUserNotification.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',

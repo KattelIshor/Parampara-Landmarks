@@ -7,6 +7,8 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\Events\\NewUserRegistered' => $baseDir . '/app/Events/NewUserRegistered.php',
+    'App\\Events\\UserRegistered' => $baseDir . '/app/Events/UserRegistered.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\AdminController' => $baseDir . '/app/Http/Controllers/AdminController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
@@ -24,6 +26,9 @@ return array(
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\UserCheck' => $baseDir . '/app/Http/Middleware/UserCheck.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+    'App\\Listeners\\HandleUserRegistration' => $baseDir . '/app/Listeners/HandleUserRegistration.php',
+    'App\\Listeners\\NotifyAdminAboutNewUser' => $baseDir . '/app/Listeners/NotifyAdminAboutNewUser.php',
+    'App\\Listeners\\SendNotificationOnUserRegistered' => $baseDir . '/app/Listeners/SendNotificationOnUserRegistered.php',
     'App\\Models\\Category' => $baseDir . '/app/Models/Category.php',
     'App\\Models\\City' => $baseDir . '/app/Models/City.php',
     'App\\Models\\Facilities' => $baseDir . '/app/Models/Facilities.php',
@@ -35,7 +40,9 @@ return array(
     'App\\Models\\UserData' => $baseDir . '/app/Models/UserData.php',
     'App\\Models\\cms' => $baseDir . '/app/Models/cms.php',
     'App\\Models\\gallary' => $baseDir . '/app/Models/gallary.php',
+    'App\\Notifications\\AdminNewUserNotification' => $baseDir . '/app/Notifications/AdminNewUserNotification.php',
     'App\\Notifications\\AdminNotification' => $baseDir . '/app/Notifications/AdminNotification.php',
+    'App\\Notifications\\NewUserNotification' => $baseDir . '/app/Notifications/NewUserNotification.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
