@@ -31,10 +31,12 @@
                                             </div>
                                         </div>
 
-                                        <form method="POST" action="{{ route('notify.admin') }}">
-    @csrf
-    <button type="submit">Notify Admin</button>
-</form>
+
+                                        <form action="/Becomeadmin.blade.html" method="GET">
+                                            @csrf
+                                            <button type="submit" class="btn btn-primary btn-lg">Sell a Property</button>
+                                        </form>
+
 
                                         <div class="col-12 mb-3">
                                             <h5 class="card-title">About :</h5>

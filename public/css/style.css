@@ -1,3 +1,17 @@
+.header {
+    background-color: #000000;
+  }
+
+  .navbar {
+    background-color: #000000;
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+    color: #EDBA24;
+  }
+
+
+
 @media (max-width: 768px) {
     /* Styles for screens smaller than 768px */
   }
@@ -38,4 +52,6 @@
       flex-basis: 100%; /* Occupies full width */
     }
   }
-
+  .golden-bg {
+    background-color: golden;
+  }

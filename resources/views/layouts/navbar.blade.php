@@ -1,7 +1,9 @@
 <!-- Header Bootstrap -->
-<header class="py-1 bg-dark sticky-top text-white">
+<header class="py-1 header">
+
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+
             <div class="container-fluid">
                 {{-- @if (!empty($logo_image->value))
                     <a class="navbar-brand" href="{{ route('userHome') }}">
@@ -18,7 +20,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link @if ($menu == 'home') active @endif" aria-current="page"
+                            <a class="nav-link @if ($menu == 'home') @endif" aria-current="page"
                                 href="{{ route('userHome') }}">Home</a>
                         </li>
                         <li class="nav-item dropdown">
@@ -30,7 +32,7 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownPurpose">
                                 <li><a class="dropdown-item" href="{{ route('show_purpose', 'sale') }}">Sale</a></li>
                                 <li><a class="dropdown-item" href="{{ route('show_purpose', 'rent') }}">Rent</a></li>
-                                <li><a class="dropdown-item" href="{{ route('show_purpose', 'pg') }}">PG</a></li>
+
                             </ul>
                         </li>
                         <li class="nav-item dropdown">

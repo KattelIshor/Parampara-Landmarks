@@ -14,7 +14,7 @@
   <div class="carousel-inner">
     <!-- Single item -->
     <div class="carousel-item active">
-      <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp" class="d-block w-100"
+      <img src="https://th.bing.com/th/id/R.7148452bd3f46744eb47e1cefe480399?rik=p%2fFxn1s4wGNtHA&pid=ImgRaw&r=0" class="d-block w-100" class="d-block w-100"
         alt="Sunset Over the City" />
       <div class="carousel-caption d-none d-md-block">
         <h5>First slide label</h5>
@@ -24,7 +24,7 @@
 
     <!-- Single item -->
     <div class="carousel-item">
-      <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(22).webp" class="d-block w-100"
+      <img src="https://th.bing.com/th/id/R.7148452bd3f46744eb47e1cefe480399?rik=p%2fFxn1s4wGNtHA&pid=ImgRaw&r=0" class="d-block w-100" class="d-block w-100"
         alt="Canyon at Nigh" />
       <div class="carousel-caption d-none d-md-block">
         <h5>Second slide label</h5>
@@ -34,7 +34,7 @@
 
     <!-- Single item -->
     <div class="carousel-item">
-      <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(23).webp" class="d-block w-100"
+      <img src="https://th.bing.com/th/id/R.7148452bd3f46744eb47e1cefe480399?rik=p%2fFxn1s4wGNtHA&pid=ImgRaw&r=0" class="d-block w-100"
         alt="Cliff Above a Stormy Sea" />
       <div class="carousel-caption d-none d-md-block">
         <h5>Third slide label</h5>

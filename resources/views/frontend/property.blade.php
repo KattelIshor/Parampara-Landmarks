@@ -99,7 +99,7 @@
                                         </div>
                                         <div class="col-10">
                                             <h5 class="card-text">
-                                                ₹ {{ number_format($item->price) }}
+                                                Rs: {{ number_format($item->price) }}
                                                 @if ($item->purpose != 'sale')
                                                     /month
                                                 @endif
@@ -243,10 +243,10 @@
                             function initMap() {
                                 // Parse the map address string
                                 var address = "{!! $item->map !!}";
-                    
+
                                 // Create a new geocoder instance
                                 var geocoder = new google.maps.Geocoder();
-                    
+
                                 // Geocode the address to get the location coordinates
                                 geocoder.geocode({ 'address': address }, function(results, status) {
                                     if (status === 'OK') {
@@ -266,7 +266,7 @@
                             }
                         </script>
                     @endif
-                    
+
 
                         <div class="row g-0 mb-2 card-body">
                             <div class="col-12 mb-2">
